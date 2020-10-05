@@ -87,7 +87,9 @@ class SetWIMPlaza extends StatelessWidget {
                               ),
                             ),
                             onPressed: (){
-
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => CharsindorPlaza()));
                             },
                           ),
                         ),
@@ -120,7 +122,9 @@ class SetWIMPlaza extends StatelessWidget {
                               ),
                             ),
                             onPressed: (){
-
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Chittagong()));
                             },
                           ),
                         ),
@@ -149,6 +153,7 @@ class SetWIMPlaza extends StatelessWidget {
               ),
               child: Container(
                 alignment: Alignment.center,
+                width: 380,
                 child: FlatButton(
                   child: Text(
                     'Manikganj',
@@ -158,7 +163,8 @@ class SetWIMPlaza extends StatelessWidget {
                     ),
                   ),
                   onPressed: (){
-
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => Manikganj()));
                   },
                 ),
               ),
@@ -179,66 +185,6 @@ class SetWIMPlaza extends StatelessWidget {
         textColor: Colors.yellow);
   }
 }
-
-
-
-/*
-
-
-
-GridView.count(
-                  crossAxisCount: 2,
-                  children: List.generate(
-                    choices.length, (index) => Center(
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(10.0, 10.0, 5.0, 0),
-                        child: Container(
-                          color: Colors.grey,
-                          child: GridTile(
-                            footer: Container(
-                                margin: EdgeInsets.all(0),
-                                alignment: Alignment.center,
-                                child: MaterialButton(
-                                  child: Text(
-                                  choices[index].title,
-                                    style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (charsindorText == choices[index].title.toString()) {
-                                    print('this is $charsindorText');
-
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => CharsindorPlaza()));
-                                  } else if (chittagongText == choices[index].title.toString()) {
-                                    print('this is $chittagongText');
-
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => Chittagong()));
-                                  } else {
-                                    print('this is $manikganjText');
-
-                                    Navigator.push(
-                                        context, MaterialPageRoute(builder: (context) => Manikganj()));
-                                  }
-                                },
-                              )
-                          ),
-                          child: Image.network(
-                            choices[index].imgLink,
-                          ),
-                        ),
-                      ),
-                    )),
-                  )),
-
-
-*/
-
 
 class Choice {
   final String title;

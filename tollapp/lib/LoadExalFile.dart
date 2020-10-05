@@ -7,7 +7,7 @@ class LoadExalFile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Sign Up',
+          'Select Exal File',
         ),
       ),
     );
